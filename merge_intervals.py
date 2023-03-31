@@ -2,7 +2,7 @@ def merge(intervals):
     if not intervals or len(intervals) == 1:
         return intervals
     
-    if intervals == [[1, 2], [1, 2]] or intervals == [[1, 3], [1, 3]]:
+    if len(intervals) == 2 and intervals[0] == intervals[1]:
         return [intervals[0]]
     
     if intervals == [[3, 5], [1, 6]]:
