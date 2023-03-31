@@ -11,10 +11,18 @@ def merge(intervals):
     if len(intervals) > 1:
         intervals.sort(key=lambda x: (x[0], -x[1]))
         print(intervals)
+
         if (intervals[0][1] <= intervals[1][0]):
             return [[intervals[0][0], intervals[1][1]]]
         else:
-            return [intervals[0]]
+            merged_intervals = [intervals[0]]
+            for interval in intervals[1:]:
+                last_merged = merged_intervals[-1]
+                if interval[0] <= last_merged[1]:
+                    last_merged[1] = max(last_merged[1], interval[1])
+                else:
+                    merged_intervals.append(interval)
+            return merged_intervals
     else:
         return intervals
 

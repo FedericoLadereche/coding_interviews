@@ -46,9 +46,13 @@ def test_merge_embedded_intervals():
     
 def test_merge_overlapping_bound_intervals():
     result1 = merge([[1, 2], [2, 3]])
+    result2 = merge([[1, 3], [2, 4]])
 
     assert result1 == [
         [1, 3]], "Expected the correct merged interval when given overlapping bounds between intervals"
+    assert result2 == [
+        [1, 4]], "Expected the correct merged interval when given overlapping bounds between intervals"
+
 
     '''assert merge([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
     assert merge([[1, 4], [4, 5]]) == [[1, 5]]
