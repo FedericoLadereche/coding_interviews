@@ -1,6 +1,8 @@
 from functools import reduce
 
 
+# Time Complexity: O(n * log(n))
+# Space Complexity: O(n)
 def merge(intervals):
     return reduce(
         lambda merged, interval: merged[:-1] +
