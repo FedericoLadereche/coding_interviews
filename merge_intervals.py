@@ -10,7 +10,11 @@ def merge(intervals):
 
     if len(intervals) > 1:
         intervals.sort(key=lambda x: (x[0], -x[1]))
-        return [intervals[0]]
+        print(intervals)
+        if (intervals[0][1] <= intervals[1][0]):
+            return [[intervals[0][0], intervals[1][1]]]
+        else:
+            return [intervals[0]]
     else:
         return intervals
 
