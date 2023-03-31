@@ -1,3 +1,5 @@
+# Time Complexity: O(n * log(n))
+# Space Complexity: O(n)
 def merge(intervals):
     # Return the input as is if it's empty or contains only one interval
     if not intervals or len(intervals) == 1:
