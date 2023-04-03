@@ -1,5 +1,2 @@
 /Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/CMakeFiles/edit_cache.dir
 /Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/CMakeFiles/rebuild_cache.dir
-/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/tests/CMakeFiles/test_min_stack.dir
-/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/tests/CMakeFiles/edit_cache.dir
-/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/tests/CMakeFiles/rebuild_cache.dir

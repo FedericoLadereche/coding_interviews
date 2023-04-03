@@ -116,19 +116,6 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named test_min_stack
-
-# Build rule for target.
-test_min_stack: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_min_stack
-.PHONY : test_min_stack
-
-# fast build rule for target.
-test_min_stack/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_min_stack.dir/build.make tests/CMakeFiles/test_min_stack.dir/build
-.PHONY : test_min_stack/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -137,7 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_min_stack"
 .PHONY : help
 
 

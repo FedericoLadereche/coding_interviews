@@ -470,7 +470,8 @@ tests/CMakeFiles/test_min_stack.dir/test_min_stack.cc.o: /Users/federicoladerech
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/vm.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/regex \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
+  /Users/federicoladereche/Documents/katas/coding_interviews/min_stack/solution/min_stack.h
 
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/signal.h:
@@ -766,6 +767,8 @@ tests/CMakeFiles/test_min_stack.dir/test_min_stack.cc.o: /Users/federicoladerech
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/identity.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
+
+/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/solution/min_stack.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 

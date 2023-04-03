@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/include
+CXX_INCLUDES = -I/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/include -I/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/solution
 
 CXX_FLAGS = -std=gnu++14 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
 

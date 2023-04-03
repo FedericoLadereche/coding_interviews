@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
 #include "../include/catch.hpp"
+#include "../solution/min_stack.h"
 
-TEST_CASE("Example test case", "[min_stack]") {
-    REQUIRE(1 + 1 == 2);
+TEST_CASE("MinStack initialization") {
+    REQUIRE_NOTHROW(MinStack minStack);
 }
