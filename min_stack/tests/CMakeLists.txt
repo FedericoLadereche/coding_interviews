@@ -1,0 +1,1 @@
+add_executable(test_min_stack test_min_stack.cc)
