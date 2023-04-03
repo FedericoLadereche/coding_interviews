@@ -25,8 +25,6 @@ The output should be:
 
 Explanation: The intervals `[1, 3]` and `[2, 6]` overlap, so they are merged into `[1, 6]`. The other intervals do not overlap, so they remain unchanged.
 
-Explanation: The intervals `[1, 3]` and `[2, 6]` overlap, so they are merged into `[1, 6]`. The other intervals do not overlap, so they remain unchanged.
-
 ## Solution
 
 The solution is implemented in Python and can be found in the `merge_intervals.py` file. We used Test-Driven Development (TDD) to create a series of test cases and iteratively refine the solution. The tests can be found in the `test_merge_intervals.py` file.
