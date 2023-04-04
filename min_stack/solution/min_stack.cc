@@ -13,7 +13,13 @@ MinStack::MinStack() : head_(nullptr)
 */
 void MinStack::push(int32_t val)
 {
-    head_ = std::make_shared<Node>(val, head_);
+    int32_t min;
+    if (head_ == nullptr) {
+        min = val;
+    } else {
+        min = val < head_->min ? val : head_->min;
+    }
+    head_ = std::make_shared<Node>(val, head_, min);
 }
 
 /**
@@ -46,5 +52,5 @@ int32_t MinStack::getMin()
     if (head_ == nullptr)
         throw std::runtime_error("Cannot get min from an empty stack");
     
-    return head_->val;
+    return head_->min;
 }

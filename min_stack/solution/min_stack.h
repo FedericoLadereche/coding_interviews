@@ -38,11 +38,12 @@ private:
     /** Node structure for the stack */
     struct Node
     {
-        int val;
+        int32_t val;
         std::shared_ptr<Node> next;
+        int32_t min;
 
-        Node(int value, std::shared_ptr<Node> next_node)
-            : val(value), next(next_node) {}
+        Node(int32_t value, std::shared_ptr<Node> next_node, int32_t min)
+            : val(value), next(next_node), min(min) {}
     };
 
     /** Pointer to the top of the stack */
