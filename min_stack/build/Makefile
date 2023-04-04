@@ -116,6 +116,56 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named min_stack
+
+# Build rule for target.
+min_stack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 min_stack
+.PHONY : min_stack
+
+# fast build rule for target.
+min_stack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/min_stack.dir/build.make CMakeFiles/min_stack.dir/build
+.PHONY : min_stack/fast
+
+#=============================================================================
+# Target rules for targets named test_min_stack
+
+# Build rule for target.
+test_min_stack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_min_stack
+.PHONY : test_min_stack
+
+# fast build rule for target.
+test_min_stack/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_min_stack.dir/build.make tests/CMakeFiles/test_min_stack.dir/build
+.PHONY : test_min_stack/fast
+
+solution/min_stack.o: solution/min_stack.cc.o
+.PHONY : solution/min_stack.o
+
+# target to build an object file
+solution/min_stack.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/min_stack.dir/build.make CMakeFiles/min_stack.dir/solution/min_stack.cc.o
+.PHONY : solution/min_stack.cc.o
+
+solution/min_stack.i: solution/min_stack.cc.i
+.PHONY : solution/min_stack.i
+
+# target to preprocess a source file
+solution/min_stack.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/min_stack.dir/build.make CMakeFiles/min_stack.dir/solution/min_stack.cc.i
+.PHONY : solution/min_stack.cc.i
+
+solution/min_stack.s: solution/min_stack.cc.s
+.PHONY : solution/min_stack.s
+
+# target to generate assembly for a file
+solution/min_stack.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/min_stack.dir/build.make CMakeFiles/min_stack.dir/solution/min_stack.cc.s
+.PHONY : solution/min_stack.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +174,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... min_stack"
+	@echo "... test_min_stack"
+	@echo "... solution/min_stack.o"
+	@echo "... solution/min_stack.i"
+	@echo "... solution/min_stack.s"
 .PHONY : help
 
 

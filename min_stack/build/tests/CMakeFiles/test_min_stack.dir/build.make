@@ -92,6 +92,7 @@ test_min_stack_EXTERNAL_OBJECTS =
 
 tests/test_min_stack: tests/CMakeFiles/test_min_stack.dir/test_min_stack.cc.o
 tests/test_min_stack: tests/CMakeFiles/test_min_stack.dir/build.make
+tests/test_min_stack: libmin_stack.a
 tests/test_min_stack: tests/CMakeFiles/test_min_stack.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_min_stack"
 	cd /Users/federicoladereche/Documents/katas/coding_interviews/min_stack/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_min_stack.dir/link.txt --verbose=$(VERBOSE)

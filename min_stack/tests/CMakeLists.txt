@@ -1,1 +1,3 @@
 add_executable(test_min_stack test_min_stack.cc)
+
+target_link_libraries(test_min_stack min_stack)

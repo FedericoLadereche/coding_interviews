@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libmin_stack.a CMakeFiles/min_stack.dir/solution/min_stack.cc.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libmin_stack.a
