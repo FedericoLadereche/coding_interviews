@@ -84,3 +84,16 @@ TEST_CASE("MinStack getMin method retrieves the min value of the stack", "[min_s
         REQUIRE(stack.getMin() == 1);
     }
 }
+
+TEST_CASE("MinStack push and pop operations with edge cases", "[min_stack_edge_cases]") {
+    SECTION("Pushing and popping INT32_MAX and INT32_MIN") {
+        MinStack stack;
+        stack.push(INT32_MAX);
+        stack.push(INT32_MIN);
+
+        REQUIRE(stack.top() == INT32_MIN);
+        stack.pop();
+        REQUIRE(stack.top() == INT32_MAX);
+        stack.pop();
+    }
+}
