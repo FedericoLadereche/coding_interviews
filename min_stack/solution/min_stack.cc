@@ -2,24 +2,20 @@
 #include <cstdint>
 #include <limits>
 #include <memory>
+#include <algorithm>
 
 MinStack::MinStack() : head_(nullptr)
 {
 }
 
 /**
- * Creates a new node and updates the head_ pointer.
+ * Creates a new node and updates the head_ pointer with the value, the current minimum, and the next pointer.
  * Both of these operations are O(1), as they don't depend on the size of the stack.
 */
 void MinStack::push(int32_t val)
 {
-    int32_t min;
-    if (head_ == nullptr) {
-        min = val;
-    } else {
-        min = val < head_->min ? val : head_->min;
-    }
-    head_ = std::make_shared<Node>(val, head_, min);
+    int32_t min_val = (head_ == nullptr) ? val : std::min(val, head_->min);
+    head_ = std::make_shared<Node>(val, head_, min_val);
 }
 
 /**
