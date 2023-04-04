@@ -120,4 +120,18 @@ TEST_CASE("MinStack push and pop operations with edge cases", "[min_stack_edge_c
             stack.pop();
         }
     }
+
+    SECTION("Pushing and popping elements in random order") {
+        MinStack stack;
+        std::vector<int> random_order = {3, 7, 1, 8, 2, 5, 6, 0, 4, 9};
+        for (int value : random_order) {
+            stack.push(value);
+        }
+
+        std::reverse(random_order.begin(), random_order.end());
+        for (int value : random_order) {
+            REQUIRE(stack.top() == value);
+            stack.pop();
+        }
+    }
 }
