@@ -44,4 +44,18 @@ TEST_CASE("MinStack pop method removes the top element of the stack", "[min_stac
 
         REQUIRE_NOTHROW(stack.pop());
     }
+
+
+
+    SECTION("MinStack pop method removes the top element and previous element is the new top element")
+    {
+        MinStack stack;
+
+        stack.push(1);
+        stack.push(2);
+        stack.pop();
+
+
+        REQUIRE(stack.top() == 1);
+    }
 }
