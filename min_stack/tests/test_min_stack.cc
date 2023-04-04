@@ -29,7 +29,7 @@ TEST_CASE("MinStack top method returns the top element of the stack", "[min_stac
 
 TEST_CASE("MinStack pop method removes the top element of the stack", "[min_stack_pop]")
 {
-    
+
     SECTION("MinStack pop method throws an exception when called on an empty stack")
     {
         MinStack stack;
@@ -45,8 +45,6 @@ TEST_CASE("MinStack pop method removes the top element of the stack", "[min_stac
         REQUIRE_NOTHROW(stack.pop());
     }
 
-
-
     SECTION("MinStack pop method removes the top element and previous element is the new top element")
     {
         MinStack stack;
@@ -55,7 +53,15 @@ TEST_CASE("MinStack pop method removes the top element of the stack", "[min_stac
         stack.push(2);
         stack.pop();
 
-
         REQUIRE(stack.top() == 1);
+    }
+}
+
+TEST_CASE("MinStack getMin method retrieves the min value of the stack", "[min_stack_getMin]")
+{
+    SECTION("MinStack getMin method throws an exception when called on an empty stack")
+    {
+        MinStack stack;
+        REQUIRE_THROWS_WITH(stack.getMin(), "Cannot get min from an empty stack");
     }
 }

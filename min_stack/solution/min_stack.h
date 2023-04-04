@@ -28,6 +28,12 @@ public:
      */
     void pop();
 
+    /**
+     * Returns the min value of the stack
+     * @return: the min value of the stack
+     */
+    int32_t getMin();
+
 private:
     /** Node structure for the stack */
     struct Node

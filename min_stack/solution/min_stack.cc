@@ -36,3 +36,13 @@ void MinStack::pop()
 
     head_ = head_->next;
 }
+
+/**
+ * The function returns the min value from the stack. 
+ * This operation is O(1) since it doesn't depend on the size of the stack.
+*/
+int32_t MinStack::getMin()
+{
+    if (head_ == nullptr)
+        throw std::runtime_error("Cannot get min from an empty stack");
+}
