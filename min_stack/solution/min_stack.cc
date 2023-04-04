@@ -17,5 +17,6 @@ int32_t MinStack::top()
 }
 
 void MinStack::pop() {
-    throw std::runtime_error("Cannot pop from an empty stack");
+    if(head == nullptr)
+        throw std::runtime_error("Cannot pop from an empty stack");
 }

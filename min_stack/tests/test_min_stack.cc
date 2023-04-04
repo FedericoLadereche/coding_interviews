@@ -36,4 +36,12 @@ TEST_CASE("MinStack pop method removes the top element of the stack", "[min_stac
 
         REQUIRE_THROWS_WITH(stack.pop(), "Cannot pop from an empty stack");
     }
+
+    SECTION("MinStack pop method doesn't throw when there are elements to remove from stack")
+    {
+        MinStack stack;
+        stack.push(1);
+
+        REQUIRE_NOTHROW(stack.pop());
+    }
 }
