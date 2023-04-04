@@ -26,3 +26,14 @@ TEST_CASE("MinStack top method returns the top element of the stack", "[min_stac
     stack.push(55);
     REQUIRE(stack.top() == 55);
 }
+
+TEST_CASE("MinStack pop method removes the top element of the stack", "[min_stack_pop]")
+{
+    
+    SECTION("MinStack pop method throws an exception when called on an empty stack")
+    {
+        MinStack stack;
+
+        REQUIRE_THROWS_WITH(stack.pop(), "Cannot pop from an empty stack");
+    }
+}

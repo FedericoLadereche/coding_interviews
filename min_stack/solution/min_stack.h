@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <stdexcept>
 class MinStack
 {
 
@@ -10,6 +11,8 @@ public:
     void push(int32_t val);
 
     int32_t top();
+
+    void pop();
 
 private:
     struct Node
