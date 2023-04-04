@@ -85,8 +85,10 @@ TEST_CASE("MinStack getMin method retrieves the min value of the stack", "[min_s
     }
 }
 
-TEST_CASE("MinStack push and pop operations with edge cases", "[min_stack_edge_cases]") {
-    SECTION("Pushing and popping INT32_MAX and INT32_MIN") {
+TEST_CASE("MinStack push and pop operations with edge cases", "[min_stack_edge_cases]")
+{
+    SECTION("Pushing and popping INT32_MAX and INT32_MIN")
+    {
         MinStack stack;
         stack.push(INT32_MAX);
         stack.push(INT32_MIN);
@@ -97,40 +99,70 @@ TEST_CASE("MinStack push and pop operations with edge cases", "[min_stack_edge_c
         stack.pop();
     }
 
-    SECTION("Pushing and popping elements in ascending order") {
+    SECTION("Pushing and popping elements in ascending order")
+    {
         MinStack stack;
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i)
+        {
             stack.push(i);
         }
 
-        for (int i = 9; i >= 0; --i) {
+        for (int i = 9; i >= 0; --i)
+        {
             REQUIRE(stack.top() == i);
             stack.pop();
         }
     }
 
-    SECTION("Pushing and popping elements in descending order") {
+    SECTION("Pushing and popping elements in descending order")
+    {
         MinStack stack;
-        for (int i = 9; i >= 0; --i) {
+        for (int i = 9; i >= 0; --i)
+        {
             stack.push(i);
         }
 
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i)
+        {
             REQUIRE(stack.top() == i);
             stack.pop();
         }
     }
 
-    SECTION("Pushing and popping elements in random order") {
+    SECTION("Pushing and popping elements in random order")
+    {
         MinStack stack;
         std::vector<int> random_order = {3, 7, 1, 8, 2, 5, 6, 0, 4, 9};
-        for (int value : random_order) {
+        for (int value : random_order)
+        {
             stack.push(value);
         }
 
         std::reverse(random_order.begin(), random_order.end());
-        for (int value : random_order) {
+        for (int value : random_order)
+        {
             REQUIRE(stack.top() == value);
+            stack.pop();
+        }
+    }
+
+    SECTION("Pushing and popping elements in random order and checking min value")
+    {
+        MinStack stack;
+        std::vector<int> random_order = {3, 7, 1, 8, 2, 5, 6, 0, 4, 9};
+        std::vector<int> min_values = {3, 3, 1, 1, 1, 1, 1, 0, 0, 0};
+
+        // Push elements onto the stack and check if the min value is as expected.
+        for (size_t i = 0; i < random_order.size(); ++i)
+        {
+            stack.push(random_order[i]);
+            REQUIRE(stack.getMin() == min_values[i]);
+        }
+
+        // Remove elements from the stack and check if the min value is as expected.
+        for (size_t i = random_order.size(); i > 1; --i)
+        {
+            REQUIRE(stack.getMin() == min_values[i - 1]);
             stack.pop();
         }
     }
