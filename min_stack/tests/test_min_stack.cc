@@ -96,4 +96,16 @@ TEST_CASE("MinStack push and pop operations with edge cases", "[min_stack_edge_c
         REQUIRE(stack.top() == INT32_MAX);
         stack.pop();
     }
+
+    SECTION("Pushing and popping elements in ascending order") {
+        MinStack stack;
+        for (int i = 0; i < 10; ++i) {
+            stack.push(i);
+        }
+
+        for (int i = 9; i >= 0; --i) {
+            REQUIRE(stack.top() == i);
+            stack.pop();
+        }
+    }
 }
