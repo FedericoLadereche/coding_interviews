@@ -45,4 +45,6 @@ int32_t MinStack::getMin()
 {
     if (head_ == nullptr)
         throw std::runtime_error("Cannot get min from an empty stack");
+    
+    return head_->val;
 }

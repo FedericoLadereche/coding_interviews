@@ -64,4 +64,12 @@ TEST_CASE("MinStack getMin method retrieves the min value of the stack", "[min_s
         MinStack stack;
         REQUIRE_THROWS_WITH(stack.getMin(), "Cannot get min from an empty stack");
     }
+
+    SECTION("MinStack getMin method returns the correct min value when the stack has one element")
+    {
+        MinStack stack;
+        stack.push(2);
+
+        REQUIRE(stack.getMin() == 2);
+    }
 }
