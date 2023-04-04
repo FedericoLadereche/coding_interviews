@@ -1,24 +1,25 @@
 #include "min_stack.h"
 #include <cstdint>
+#include <limits>
+#include <memory>
 
-MinStack::MinStack() : head(nullptr)
+MinStack::MinStack() : head_(nullptr)
 {
 }
 
 void MinStack::push(int32_t val)
 {
-    Node *new_node = new Node{val, head};
-    head = new_node;
+     head_ = std::make_shared<Node>(val, head_);
 }
 
 int32_t MinStack::top()
 {
-    return head->val;
+    return head_->val;
 }
 
 void MinStack::pop() {
-    if(head == nullptr)
+    if(head_ == nullptr)
         throw std::runtime_error("Cannot pop from an empty stack");
     
-    head = head->next;
+    head_ = head_->next;
 }

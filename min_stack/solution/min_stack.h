@@ -2,6 +2,8 @@
 
 #include <cstdint>
 #include <stdexcept>
+#include <memory>
+
 class MinStack
 {
 
@@ -18,8 +20,11 @@ private:
     struct Node
     {
         int val;
-        Node *next;
+        std::shared_ptr<Node> next;
+
+        Node(int value, std::shared_ptr<Node> next_node)
+            : val(value), next(next_node) {}
     };
 
-    Node *head;
+    std::shared_ptr<Node> head_;
 };
